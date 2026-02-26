@@ -7,6 +7,13 @@ import Notes from '../components/Notes'
 import AboutUs from '../components/AboutUs'
 import './App.css'
 
+import { Helmet } from "react-helmet";
+
+<Helmet>
+  <title>MPSC Professor Platform | Free MPSC Notes</title>
+  <meta name="description" content="Free MPSC notes, lectures and exam preparation resources." />
+</Helmet>
+
 function App() { 
   // 1. THIS IS THE MISSING FUNCTION! It finds the ID on the page and scrolls to it smoothly.
   const scrollToSection = (sectionId) => {

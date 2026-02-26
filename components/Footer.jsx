@@ -107,7 +107,7 @@ function Footer() {
         {/* Copyright & Credits Bottom Bar */}
         <div className="row align-items-center text-center text-md-start text-secondary small">
           <div className="col-md-6 mb-2 mb-md-0">
-            &copy; {currentYear} MPSCProfessor concept. All rights reserved.
+            &copy; {currentYear} MPSC Professor concept. All rights reserved.
           </div>
           <div className="col-md-6 text-md-end" style={{ fontSize: '0.8rem' }}>
             Video content belongs to the respective <br className="d-md-none" />

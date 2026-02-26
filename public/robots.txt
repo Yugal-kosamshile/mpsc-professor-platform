@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mpsc-professor-platform.vercel.app/sitemap.xml
