@@ -2,7 +2,7 @@ import React from 'react';
 
 function Hero({ scrollToSection }) {
   return (
-    <section className="container py-4">
+    <section id="hero" className="container py-4">
       <div className="row g-4">
         
         {/* Left Side: Main Hero Content (Takes up 8/12 columns on medium+ screens) */}
@@ -28,13 +28,13 @@ function Hero({ scrollToSection }) {
                 onClick={() => scrollToSection('videos')} 
                 className="btn btn-danger px-4 py-2 fw-medium d-flex align-items-center gap-2 shadow-sm"
               >
-                ▶ Watch Latest Videos
+                ▶&#xFE0E; Watch Latest Videos
               </button>
               <button 
-                onClick={() => scrollToSection('dashboard')} 
+                onClick={() => scrollToSection('notes')} 
                 className="btn btn-outline-primary px-4 py-2 fw-medium"
               >
-                View Exam Analytics
+                View Notes
               </button>
             </div>
           </div>

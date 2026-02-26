@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 function ContactUs() {
+  const formRef = useRef(); // Required by EmailJS to grab the form data
+
   // State to manage form inputs
   const [formData, setFormData] = useState({
     name: '',
@@ -9,17 +12,36 @@ function ContactUs() {
     message: ''
   });
 
+  // State to handle the "Sending..." button UI
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   // Handle input changes
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Prevent default page reload on submit (you can hook this up to an API/EmailJS later)
+  // The Active Submit Function
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Thank you for reaching out! Your message has been received.');
-    // Reset form after submission
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setIsSubmitting(true);
+
+    // Replace these three strings with your actual IDs from EmailJS!
+    const SERVICE_ID = 'service_nwtxasa';
+    const TEMPLATE_ID = 'template_ibtu0i5';
+    const PUBLIC_KEY = 'axEtz_W4eT-Gw166A';
+
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
+      .then((result) => {
+          console.log(result.text);
+          alert('Thank you for reaching out! Your message has been sent successfully.');
+          setFormData({ name: '', email: '', subject: '', message: '' }); // Clear form
+      }, (error) => {
+          console.log(error.text);
+          alert('Oops! Something went wrong. Please try emailing us directly.');
+      })
+      .finally(() => {
+          setIsSubmitting(false);
+      });
   };
 
   return (
@@ -71,7 +93,7 @@ function ContactUs() {
                 </div>
               </div>
 
-              {/* Email Contact (Optional, replace with real email if you have one) */}
+              {/* Email Contact */}
               <div className="d-flex align-items-center gap-3">
                 <div className="bg-white rounded-circle d-flex align-items-center justify-content-center shadow-sm text-primary" style={{ width: '50px', height: '50px' }}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-envelope-fill" viewBox="0 0 16 16">
@@ -93,7 +115,8 @@ function ContactUs() {
           <div className="bg-white rounded-4 shadow-sm p-4 p-md-5 border h-100">
             <h4 className="fw-bold text-dark mb-4">Send us a Message</h4>
             
-            <form onSubmit={handleSubmit}>
+            {/* Added ref={formRef} here! */}
+            <form ref={formRef} onSubmit={handleSubmit}>
               <div className="row g-3">
                 
                 {/* Name Input */}
@@ -158,8 +181,12 @@ function ContactUs() {
 
                 {/* Submit Button */}
                 <div className="col-12 mt-4">
-                  <button type="submit" className="btn btn-primary px-5 py-2 fw-medium w-100 shadow-sm">
-                    Send Message
+                  <button 
+                    type="submit" 
+                    className="btn btn-primary px-5 py-2 fw-medium w-100 shadow-sm"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
                 </div>
 

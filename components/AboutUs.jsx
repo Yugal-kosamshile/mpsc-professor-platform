@@ -84,7 +84,7 @@ function AboutUs() {
               />
             </div>
             <h5 className="fw-bold text-dark mb-1">Aniket M. Bhendarkar</h5>
-            <p className="text-primary small fw-medium mb-3">Lead Educator & Analyst</p>
+            <p className="text-primary small fw-medium mb-3">Founder, Lead Educator & Analyst</p>
             <p className="text-secondary small mb-0">
               Specializing in Geography and Indian Polity. Aniket breaks down complex administrative concepts into easily digestible strategies for competitive exam aspirants.
             </p>

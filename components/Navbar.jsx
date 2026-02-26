@@ -30,6 +30,9 @@ function Navbar({ scrollToSection }) {
           
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex space-x-2 items-center">
+            <button className="text-slate-600 hover:text-blue-600 hover:bg-slate-200 px-4 py-2 rounded-md text-sm font-medium transition-all duration-200" onClick={() => scrollToSection('hero')}>
+              Home
+            </button>
             <button className="text-slate-600 hover:text-blue-600 hover:bg-slate-200 px-4 py-2 rounded-md text-sm font-medium transition-all duration-200" onClick={() => scrollToSection('videos')}>
               Channel Videos
             </button>

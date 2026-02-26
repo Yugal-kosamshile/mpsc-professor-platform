@@ -97,7 +97,7 @@ function Footer() {
           <div className="col-6 col-lg-4">
             <h5 className="fw-bold mb-3 text-white">Stay Updated</h5>
             <p className="text-secondary small mb-3">Join our Telegram channel for daily MCQs, PDF notes, and lecture schedules.</p>
-            <a href="#" className="btn btn-primary btn-sm px-3 rounded-pill fw-medium">Join Telegram</a>
+            <a href="https://t.me/l1G6wrOwe0UxMzY1" className="btn btn-primary btn-sm px-3 rounded-pill fw-medium">Join Telegram</a>
           </div>
 
         </div>
