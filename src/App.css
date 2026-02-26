@@ -1,0 +1,38 @@
+/* Custom MPSC Blue Background */
+.bg-mpsc-blue {
+  background-color: #0d6efd; /* You can change this hex code to your exact brand blue */
+}
+
+/* Marquee Animation Setup */
+.marquee-content {
+  /* Starts just outside the right edge of the screen */
+  transform: translateX(100%);
+  /* Adjust '20s' to make the text move faster or slower */
+  animation: scroll-marquee 25s linear infinite; 
+}
+
+/* Optional: Pauses the text when a user hovers over it with their mouse */
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+/* The actual movement logic */
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* hero section */
+/* Overriding standard text-primary to your custom blue if needed */
+.text-primary {
+    color: #0d6efd !important; /* Replace hex with your exact brand color */
+}
+
+/* Optional soft gradient for the background instead of flat bg-light */
+.bg-light {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+}
