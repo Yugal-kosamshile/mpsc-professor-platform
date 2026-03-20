@@ -51,12 +51,15 @@ function Hero({ scrollToSection }) {
               <small className="text-light opacity-75">Notes on All Lectures</small>
             </div>
             
-            {/* Image Area */}
+            {/* Video Area */}
             <div className="flex-grow-1 d-flex align-items-center justify-content-center rounded-3 overflow-hidden bg-white bg-opacity-10 p-2">
-               {/* Ensure you have an actual image path here */}
-               <img 
-                 src="./hero1.png" 
-                 alt="Maharashtra Geography Map" 
+               {/* Video acts like a GIF: Autoplay, Loop, Muted, No Controls */}
+               <video 
+                 src="/hero_gif.mp4" 
+                 autoPlay 
+                 loop 
+                 muted 
+                 playsInline
                  className="img-fluid rounded" 
                  style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                />

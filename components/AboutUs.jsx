@@ -76,7 +76,7 @@ function AboutUs() {
           <div className="card h-100 border-0 shadow-sm text-center p-4" style={{ transition: 'transform 0.3s' }} onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-5px)'} onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
             <div className="mx-auto mb-3">
               <img 
-                src="/aniket-profile.jpg" // Add actual image path
+                src="/anik.jpg" // Add actual image path
                 alt="Aniket M. Bhendarkar" 
                 className="rounded-circle object-fit-cover border border-4 border-light shadow-sm" 
                 style={{ width: '120px', height: '120px' }}
@@ -96,7 +96,7 @@ function AboutUs() {
           <div className="card h-100 border-0 shadow-sm text-center p-4" style={{ transition: 'transform 0.3s' }} onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-5px)'} onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
             <div className="mx-auto mb-3">
               <img 
-                src="/yugal-profile.jpg" // Add actual image path
+                src="/yk.png" // Add actual image path
                 alt="Yugal Y. Kosamshile" 
                 className="rounded-circle object-fit-cover border border-4 border-light shadow-sm" 
                 style={{ width: '120px', height: '120px' }}
